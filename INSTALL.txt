@@ -1,0 +1,160 @@
+================================================================================
+MANUS MONITOR WIDGET - INSTALLATION GUIDE
+================================================================================
+
+Version: 2.0.0
+Date: January 25, 2026
+
+================================================================================
+QUICK INSTALL (3 STEPS)
+================================================================================
+
+1. Extract this ZIP file:
+   unzip manus-monitor-widget-installer.zip
+
+2. Run the installation script:
+   cd manus-plasma-widget
+   chmod +x install.sh
+   ./install.sh
+
+3. Restart Plasma Shell:
+   kquitapp6 plasmashell && kstart6 plasmashell
+
+That's it! The widget is now installed.
+
+================================================================================
+ADDING THE WIDGET TO YOUR DESKTOP
+================================================================================
+
+1. Right-click on your desktop
+2. Click "Add Widgets..."
+3. Search for "Manus Monitor"
+4. Drag it to your desktop or panel
+
+================================================================================
+CONFIGURATION
+================================================================================
+
+1. Right-click the widget
+2. Click "Configure Manus Monitor..."
+3. Enter your Manus API key in the "General" tab
+4. Customize display options in the "Display Options" tab
+5. Set up alerts in the "Alerts" tab
+6. Click "Apply" or "OK"
+
+================================================================================
+GETTING YOUR API KEY
+================================================================================
+
+1. Go to https://app.manus.im
+2. Log in to your account
+3. Navigate to Settings → API Keys
+4. Create a new API key or copy an existing one
+5. Paste it into the widget configuration
+
+================================================================================
+REQUIREMENTS
+================================================================================
+
+- KDE Plasma 6.0 or later
+- Qt 6.0 or later
+- Ubuntu 22.04+ (or equivalent KDE distribution)
+- Active internet connection
+- Valid Manus API key
+
+================================================================================
+FEATURES INCLUDED
+================================================================================
+
+✓ Health Status Indicator (color-coded)
+✓ Credit Usage Gauge (animated)
+✓ Credits Spent This Month
+✓ Credits Remaining
+✓ Active Tasks Count
+✓ Completed Tasks Today
+✓ Failed Tasks Count
+✓ Task Success Rate
+✓ Average Credits Per Task
+✓ Total Tasks This Month
+✓ Task Status Distribution Chart
+✓ Daily Credit Trend Chart (7 days)
+✓ Credits Breakdown by Status
+✓ Recent Tasks Activity Feed
+✓ Total Projects Count
+✓ Active Projects Count
+✓ Network Activity Indicator
+✓ API Response Time
+✓ Low Credit Warning Alert
+✓ High Failure Rate Alert
+
+All features are fully configurable!
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+Problem: Widget doesn't appear after installation
+Solution: Restart Plasma Shell:
+  kquitapp6 plasmashell && kstart6 plasmashell
+
+Problem: "No API key configured" warning
+Solution: Right-click widget → Configure → Enter API key → Apply
+
+Problem: "API Error: 401" message
+Solution: Your API key is invalid. Get a new one from app.manus.im
+
+Problem: Widget shows no data
+Solution: 
+  1. Check internet connection
+  2. Verify API key is correct
+  3. Click the refresh button
+  4. Check console for errors: journalctl -f | grep plasmashell
+
+Problem: Charts not rendering
+Solution: Disable "Show Daily Trend Chart" in Display Options
+
+================================================================================
+UNINSTALLATION
+================================================================================
+
+To remove the widget:
+
+1. Remove widget from desktop/panel (right-click → Remove)
+2. Run the uninstall script:
+   cd manus-plasma-widget
+   chmod +x uninstall.sh
+   ./uninstall.sh
+3. Restart Plasma Shell
+
+================================================================================
+DOCUMENTATION
+================================================================================
+
+Included files:
+- README.md - Complete user guide
+- QUICKSTART.md - 5-minute setup guide
+
+Online documentation:
+- GitHub: https://github.com/jamiefmarra/manus-plasma-widget
+
+================================================================================
+SUPPORT
+================================================================================
+
+For issues, questions, or feature requests:
+- GitHub Issues: https://github.com/jamiefmarra/manus-plasma-widget/issues
+
+================================================================================
+LICENSE
+================================================================================
+
+MIT License - Free to use, modify, and distribute
+
+================================================================================
+ENJOY YOUR MANUS MONITOR WIDGET!
+================================================================================
+
+Thank you for using Manus Monitor. We hope this widget helps you track
+and optimize your Manus AI usage effectively.
+
+Happy monitoring! 🎉
