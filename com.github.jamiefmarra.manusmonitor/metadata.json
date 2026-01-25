@@ -8,12 +8,19 @@
     ],
     "Category": "System Information",
     "Description": "Comprehensive Manus API monitoring widget with real-time health status, credit usage tracking, task analytics, visual charts, network activity monitoring, and smart alerts",
+    "EnabledByDefault": true,
     "Icon": "utilities-system-monitor",
     "Id": "com.github.jamiefmarra.manusmonitor",
+    "License": "MIT",
     "Name": "Manus Monitor",
     "Version": "2.0.0",
     "Website": "https://github.com/jamiefmarra/manus-plasma-widget"
   },
+  "KPackageStructure": "Plasma/Applet",
+  "X-Plasma-API": "declarativeappletscript",
   "X-Plasma-API-Minimum-Version": "6.0",
-  "KPackageStructure": "Plasma/Applet"
+  "X-Plasma-MainScript": "ui/main.qml",
+  "X-Plasma-Provides": [
+    "org.kde.plasma.systemmonitor"
+  ]
 }
