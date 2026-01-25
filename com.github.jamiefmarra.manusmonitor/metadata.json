@@ -1,0 +1,19 @@
+{
+  "KPlugin": {
+    "Authors": [
+      {
+        "Email": "jamie@example.com",
+        "Name": "Jamie"
+      }
+    ],
+    "Category": "System Information",
+    "Description": "Monitor Manus API health status and usage statistics including credits spent and remaining balance",
+    "Icon": "utilities-system-monitor",
+    "Id": "com.github.jamiefmarra.manusmonitor",
+    "Name": "Manus Monitor",
+    "Version": "1.0.0",
+    "Website": "https://github.com/jamiefmarra"
+  },
+  "X-Plasma-API-Minimum-Version": "6.0",
+  "KPackageStructure": "Plasma/Applet"
+}
