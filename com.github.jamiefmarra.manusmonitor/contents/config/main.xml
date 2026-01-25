@@ -12,6 +12,10 @@
     <entry name="refreshInterval" type="Int">
       <default>300</default>
     </entry>
+  </group>
+
+  <group name="Display">
+    <!-- Core Metrics -->
     <entry name="showHealthStatus" type="Bool">
       <default>true</default>
     </entry>
@@ -20,6 +24,91 @@
     </entry>
     <entry name="showCreditsRemaining" type="Bool">
       <default>true</default>
+    </entry>
+    
+    <!-- Task Statistics -->
+    <entry name="showActiveTasks" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="showCompletedToday" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="showFailedTasks" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="showTaskSuccessRate" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="showAverageCreditsPerTask" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="showTotalTasksMonth" type="Bool">
+      <default>true</default>
+    </entry>
+    
+    <!-- Activity Feed -->
+    <entry name="showRecentTasks" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="recentTasksLimit" type="Int">
+      <default>5</default>
+    </entry>
+    
+    <!-- Project Metrics -->
+    <entry name="showTotalProjects" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="showActiveProjects" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="showProjectSelector" type="Bool">
+      <default>false</default>
+    </entry>
+    
+    <!-- Charts and Visualizations -->
+    <entry name="showCreditUsageGauge" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="showTaskStatusChart" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="showDailyTrendChart" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="showNetworkActivity" type="Bool">
+      <default>true</default>
+    </entry>
+    
+    <!-- Advanced Metrics -->
+    <entry name="showCreditsByStatus" type="Bool">
+      <default>false</default>
+    </entry>
+    <entry name="showApiResponseTime" type="Bool">
+      <default>false</default>
+    </entry>
+  </group>
+
+  <group name="Alerts">
+    <entry name="enableLowCreditAlert" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="lowCreditThreshold" type="Int">
+      <default>10</default>
+    </entry>
+    <entry name="enableHighFailureAlert" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="highFailureThreshold" type="Int">
+      <default>20</default>
+    </entry>
+  </group>
+
+  <group name="Advanced">
+    <entry name="selectedProjectId" type="String">
+      <default></default>
+    </entry>
+    <entry name="compactMode" type="Bool">
+      <default>false</default>
     </entry>
   </group>
 </kcfg>

@@ -1,214 +1,309 @@
 # Manus Monitor - KDE Plasma Widget
 
-A KDE Plasma desktop widget that displays real-time health status and usage statistics from the Manus API, including credits spent this month and remaining balance.
+A comprehensive KDE Plasma desktop widget for monitoring Manus API health, usage statistics, and task analytics in real-time.
+
+![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)
+![KDE Plasma](https://img.shields.io/badge/KDE%20Plasma-6-blue.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
 
 ## Features
 
-- **Health Status Monitoring**: Visual indicator showing Manus system health (Healthy/Degraded/Unhealthy)
-- **Credits Tracking**: Monitor your monthly credit usage and remaining balance
-- **Customizable Display**: Toggle visibility of different metrics
-- **Auto-Refresh**: Configurable refresh interval (default: 5 minutes)
-- **Compact Panel Mode**: Shows health status indicator in the system panel
-- **Desktop Widget Mode**: Full dashboard view with all metrics
+### 🎯 Core Metrics
+- **System Health Status** - Real-time health monitoring with color-coded indicators (Healthy/Degraded/Unhealthy)
+- **Credit Usage Tracking** - Visual gauge showing credits spent and remaining this month
+- **API Response Time** - Monitor API latency in milliseconds
 
-## Screenshots
+### 📊 Task Analytics
+- **Active Tasks Count** - See how many tasks are currently running
+- **Completed Tasks Today** - Daily productivity tracking
+- **Failed Tasks Count** - Identify issues requiring attention
+- **Task Success Rate** - Percentage of successful task completions
+- **Average Credits Per Task** - Understand typical task costs
+- **Total Tasks This Month** - Monthly activity overview
 
-### Desktop Widget Mode
-![Desktop Widget Mode](screenshots/widget-desktop-mode.png)
+### 📈 Visual Charts & Graphs
+- **Credit Usage Gauge** - Color-coded progress bar (green/yellow/red based on usage)
+- **Task Status Distribution** - Animated bar chart showing pending/running/completed/failed tasks
+- **Daily Trend Chart** - 7-day sparkline of credit usage
+- **Credits by Status Breakdown** - See credits spent on completed vs failed tasks
 
-The full dashboard view showing all metrics at a glance with color-coded health status.
+### 🔔 Smart Alerts
+- **Low Credit Warning** - Configurable threshold alert (default: 10%)
+- **High Failure Rate Alert** - Notification when task failures exceed threshold (default: 20%)
 
-### Panel Mode
-![Panel Mode](screenshots/widget-panel-mode.png)
+### 📁 Project Management
+- **Total Projects Count** - Overview of all projects
+- **Active Projects** - Projects with recent activity
+- **Project Selector** - Filter metrics by specific project (optional)
 
-Compact icon in the system panel with health status indicator.
+### 📋 Activity Feed
+- **Recent Tasks List** - Configurable feed (3-20 tasks) showing:
+  - Task title and status
+  - Credits consumed
+  - Direct links to task URLs
+  - Color-coded status indicators
 
-### Configuration Dialog
-![Configuration](screenshots/widget-config.png)
+### 🌐 Network Monitoring
+- **Real-time Network Activity Indicator** - Pulsing animation during API calls
+- **Request Tracking** - Visual feedback for all API operations
 
-Easy-to-use configuration interface for API key and display options.
-
-## Requirements
-
-- KDE Plasma 6.0 or higher
-- Ubuntu with KDE Plasma Desktop
-- Manus API key (obtain from https://manus.im)
+### ⚙️ Fully Configurable
+- **Toggle Any Feature** - Enable/disable individual metrics via settings
+- **Customizable Refresh Interval** - Set update frequency (default: 5 minutes)
+- **Alert Thresholds** - Configure warning levels for credits and failures
+- **Display Modes** - Compact panel mode or full desktop widget
 
 ## Installation
 
-### Method 1: Using the Installation Script
+### Quick Install
 
-1. Download or clone this repository
-2. Navigate to the widget directory:
-   ```bash
-   cd manus-plasma-widget
-   ```
-3. Run the installation script:
-   ```bash
-   ./install.sh
-   ```
+```bash
+# Download and extract
+wget https://github.com/jamiefmarra/manus-plasma-widget/archive/refs/heads/main.zip
+unzip main.zip
+cd manus-plasma-widget-main
 
-### Method 2: Manual Installation
+# Run installation script
+chmod +x install.sh
+./install.sh
+```
 
-1. Copy the widget folder to your local plasmoids directory:
-   ```bash
-   mkdir -p ~/.local/share/plasma/plasmoids
-   cp -r com.github.jamiefmarra.manusmonitor ~/.local/share/plasma/plasmoids/
-   ```
+### Manual Installation
 
-2. Restart Plasma Shell (optional, but recommended):
-   ```bash
-   kquitapp5 plasmashell && kstart5 plasmashell
-   ```
+```bash
+# Copy widget to Plasma widgets directory
+mkdir -p ~/.local/share/plasma/plasmoids/
+cp -r com.github.jamiefmarra.manusmonitor ~/.local/share/plasma/plasmoids/
+
+# Restart Plasma Shell
+kquitapp6 plasmashell && kstart6 plasmashell
+```
+
+### Add to Desktop/Panel
+
+1. Right-click on your desktop or panel
+2. Select **"Add Widgets..."**
+3. Search for **"Manus Monitor"**
+4. Drag it to your desktop or panel
 
 ## Configuration
 
-1. After installation, add the widget to your desktop or panel:
-   - Right-click on your desktop or panel
-   - Select **"Add Widgets..."**
-   - Search for **"Manus Monitor"**
-   - Drag the widget to your desired location
+### 1. API Key Setup
 
-2. Configure the widget:
-   - Right-click on the widget
-   - Select **"Configure Manus Monitor..."**
-   - Enter your Manus API key
-   - Adjust refresh interval (60-3600 seconds)
-   - Toggle visibility of different metrics
+1. Right-click the widget → **Configure Manus Monitor**
+2. Go to **General** tab
+3. Enter your Manus API key
+4. Set refresh interval (default: 300 seconds)
 
-## Configuration Options
+### 2. Display Options
 
-| Option | Description | Default |
-|--------|-------------|---------|
-| **API Key** | Your Manus API key for authentication | (empty) |
-| **Refresh Interval** | How often to fetch data from the API (in seconds) | 300 (5 minutes) |
-| **Show Health Status** | Display system health indicator | Enabled |
-| **Show Credits Spent** | Display credits spent this month | Enabled |
-| **Show Credits Remaining** | Display remaining credit balance | Enabled |
+Navigate to **Display Options** tab to toggle features:
 
-## Usage
+#### Core Metrics
+- ☑ Show Health Status
+- ☑ Show Credits Spent This Month
+- ☑ Show Credits Remaining
 
-### Panel Mode
-When added to a panel, the widget displays as a compact icon with a small health status indicator. Click the icon to open the full dashboard popup.
+#### Task Statistics
+- ☑ Show Active Tasks Count
+- ☑ Show Completed Tasks Today
+- ☑ Show Failed Tasks Count
+- ☑ Show Task Success Rate
+- ☑ Show Average Credits Per Task
+- ☑ Show Total Tasks This Month
 
-### Desktop Mode
-When added to the desktop, the widget displays the full dashboard with all metrics visible at once. You can resize the widget to your preference.
+#### Activity Feed
+- ☑ Show Recent Tasks Feed
+- 🔢 Number of Recent Tasks (3-20)
 
-### Manual Refresh
-Click the refresh button (circular arrow icon) in the widget header to manually fetch the latest data from the Manus API.
+#### Project Metrics
+- ☑ Show Total Projects Count
+- ☑ Show Active Projects Count
+- ☐ Show Project Selector/Filter
+
+#### Charts & Visualizations
+- ☑ Show Credit Usage Gauge
+- ☑ Show Task Status Chart
+- ☑ Show Daily Trend Chart
+- ☑ Show Network Activity Indicator
+
+#### Advanced Metrics
+- ☐ Show Credits Breakdown by Task Status
+- ☐ Show API Response Time
+
+### 3. Alerts Configuration
+
+Navigate to **Alerts** tab:
+
+- **Low Credit Alert**
+  - Enable/disable warning
+  - Set threshold percentage (1-50%)
+
+- **High Failure Rate Alert**
+  - Enable/disable warning
+  - Set threshold percentage (5-100%)
 
 ## API Integration
 
-The widget connects to the Manus API to retrieve:
-- System health status
-- Monthly credit usage statistics
-- Remaining credit balance
+The widget uses the official Manus API endpoints:
 
-**Note**: The Manus API endpoint for usage statistics (`/v1/account/usage`) is used in this implementation. If this endpoint is not yet available in the public API, the widget will display mock data for demonstration purposes until the official endpoint is released.
+- `GET /v1/tasks` - Retrieve task data with filtering
+- `GET /v1/projects` - Retrieve project information
+
+### Data Processing
+
+- **Real-time Updates** - Fetches data at configurable intervals
+- **Smart Caching** - Efficient API usage with local data processing
+- **Error Handling** - Graceful degradation with error messages
+
+### Calculated Metrics
+
+Since the Manus API doesn't provide a dedicated usage endpoint, the widget calculates:
+
+- **Credits Spent** - Sum of `credit_usage` from all tasks this month
+- **Health Status** - Derived from task failure rates:
+  - Healthy: <5% failure rate
+  - Degraded: 5-20% failure rate
+  - Unhealthy: >20% failure rate
+- **Daily Trends** - Aggregated from task timestamps and credit usage
+
+## Display Modes
+
+### Desktop Widget Mode
+Full-featured display with all enabled metrics, charts, and activity feed.
+
+### Panel Mode (Compact)
+- Small icon with health status indicator
+- Network activity pulse animation
+- Click to expand full view
 
 ## Troubleshooting
 
-### Widget Not Appearing
-- Ensure you've restarted Plasma Shell after installation
-- Check that the widget files are in the correct location: `~/.local/share/plasma/plasmoids/com.github.jamiefmarra.manusmonitor/`
+### Widget Not Showing Data
 
-### API Connection Issues
-- Verify your API key is correct in the widget configuration
-- Check your internet connection
-- Ensure the Manus API is accessible from your network
+1. **Check API Key**: Ensure your Manus API key is correctly entered
+2. **Verify Network**: Check internet connection
+3. **Review Logs**: Run `journalctl -f` and look for errors
+4. **Restart Plasma**: `kquitapp6 plasmashell && kstart6 plasmashell`
 
-### Configuration Not Saving
-- Make sure you have write permissions in your home directory
-- Try removing and re-adding the widget
+### API Errors
+
+- **401 Unauthorized**: Invalid API key - check configuration
+- **429 Rate Limit**: Too many requests - increase refresh interval
+- **500 Server Error**: Manus API issue - wait and retry
+
+### Performance Issues
+
+- Increase refresh interval to reduce API calls
+- Disable unused features in Display Options
+- Use compact mode when not actively monitoring
 
 ## Uninstallation
 
-### Using the Uninstall Script
 ```bash
-cd manus-plasma-widget
+# Run uninstall script
+cd manus-plasma-widget-main
+chmod +x uninstall.sh
 ./uninstall.sh
-```
 
-### Manual Uninstallation
-```bash
+# Or manually remove
 rm -rf ~/.local/share/plasma/plasmoids/com.github.jamiefmarra.manusmonitor
-```
-
-After uninstallation, restart Plasma Shell:
-```bash
-kquitapp5 plasmashell && kstart5 plasmashell
 ```
 
 ## Development
 
-### Project Structure
+### File Structure
+
 ```
 com.github.jamiefmarra.manusmonitor/
-├── metadata.json              # Widget metadata and information
+├── metadata.json                    # Widget metadata
 ├── contents/
 │   ├── config/
-│   │   ├── main.xml          # Configuration schema
-│   │   └── config.qml        # Configuration tabs definition
+│   │   ├── main.xml                # Configuration schema
+│   │   └── config.qml              # Configuration tabs
 │   └── ui/
-│       ├── main.qml          # Main widget UI and logic
-│       └── configGeneral.qml # Configuration UI
+│       ├── main.qml                # Main widget UI
+│       ├── configGeneral.qml       # General settings
+│       ├── configDisplay.qml       # Display options
+│       └── configAlerts.qml        # Alert settings
 ```
 
-### Testing Changes
-After modifying the widget files:
+### Building from Source
+
 ```bash
-# Restart Plasma Shell to reload the widget
-kquitapp5 plasmashell && kstart5 plasmashell
-
-# Or test in a separate window
-plasmawindowed com.github.jamiefmarra.manusmonitor
+git clone https://github.com/jamiefmarra/manus-plasma-widget.git
+cd manus-plasma-widget
+./install.sh
 ```
 
-## Technical Details
+### Contributing
 
-- **Language**: QML (Qt Quick) with JavaScript
-- **Framework**: KDE Plasma 6.x
-- **API Protocol**: REST (HTTPS)
-- **Authentication**: API key via header
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
 
-## Future Enhancements
+## Requirements
 
-Potential features for future versions:
-- Historical usage graphs
-- Usage alerts and notifications
-- Multiple account support
-- Export usage data to CSV
-- Custom color themes
-- Additional Manus API metrics
+- **KDE Plasma**: 6.0 or higher
+- **Qt**: 6.0 or higher
+- **Operating System**: Linux (Ubuntu, Fedora, Arch, etc.)
+- **Manus API Key**: Required for data access
 
-## Contributing
+## Screenshots
 
-Contributions are welcome! Please feel free to submit issues or pull requests.
+### Desktop Mode
+Full widget showing all metrics, charts, and activity feed.
+
+### Panel Mode
+Compact icon with health indicator and network activity pulse.
+
+### Configuration
+Three-tab configuration interface for customizing all features.
+
+## Roadmap
+
+- [ ] Historical data charts (30-day trends)
+- [ ] Export data to CSV
+- [ ] Custom color themes
+- [ ] Multiple API key support
+- [ ] Task filtering by project
+- [ ] Desktop notifications integration
+- [ ] System tray integration
 
 ## License
 
-This widget is provided as-is for personal and commercial use.
+MIT License - See LICENSE file for details
 
 ## Support
 
-For issues related to:
-- **Widget functionality**: Create an issue in this repository
-- **Manus API**: Visit https://help.manus.im
-- **KDE Plasma**: Visit https://kde.org/support/
+- **Issues**: https://github.com/jamiefmarra/manus-plasma-widget/issues
+- **Manus API Docs**: https://open.manus.im/docs
+- **KDE Plasma Docs**: https://develop.kde.org/docs/plasma/
 
-## Author
+## Changelog
 
-Created by Jamie
+### Version 2.0.0 (2026-01-25)
+- ✨ Added comprehensive task analytics
+- ✨ Implemented visual charts and graphs
+- ✨ Added network activity monitoring
+- ✨ Created fully configurable display options
+- ✨ Added smart alerts system
+- ✨ Implemented recent tasks activity feed
+- ✨ Added project metrics
+- ✨ Enhanced compact mode with status indicators
+- 🎨 Improved visual design with color-coded elements
+- 🐛 Fixed API integration issues
+- 📚 Comprehensive documentation
 
-## Version History
+### Version 1.0.0 (2026-01-24)
+- 🎉 Initial release
+- Basic health monitoring
+- Credit usage tracking
+- Simple configuration
 
-- **1.0.0** (2026-01-24): Initial release
-  - Health status monitoring
-  - Credits tracking (spent and remaining)
-  - Configurable refresh intervals
-  - Panel and desktop modes
+## Credits
 
-## Acknowledgments
-
-- KDE Plasma development team for the excellent widget framework
-- Manus team for providing the API
+Created by Jamie Marra
+Built for the Manus AI platform

@@ -7,12 +7,12 @@
       }
     ],
     "Category": "System Information",
-    "Description": "Monitor Manus API health status and usage statistics including credits spent and remaining balance",
+    "Description": "Comprehensive Manus API monitoring widget with real-time health status, credit usage tracking, task analytics, visual charts, network activity monitoring, and smart alerts",
     "Icon": "utilities-system-monitor",
     "Id": "com.github.jamiefmarra.manusmonitor",
     "Name": "Manus Monitor",
-    "Version": "1.0.0",
-    "Website": "https://github.com/jamiefmarra"
+    "Version": "2.0.0",
+    "Website": "https://github.com/jamiefmarra/manus-plasma-widget"
   },
   "X-Plasma-API-Minimum-Version": "6.0",
   "KPackageStructure": "Plasma/Applet"
